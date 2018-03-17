@@ -73,10 +73,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articlename', function(req,res){
-    res.send(createhtml(articles[articlename]));
+app.get('/:articleName', function(req,res){
+    res.send(createhtml(articles[articleName]));
 });
-var articlename=req.params.articleName;
+var articleName=req.params.articleName;
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
