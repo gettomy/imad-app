@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var One_1 = {
+var articles={
+'One_1': {
     title:'One_1',
     heading:'Article One',
     date:'March 18 2018',
@@ -18,6 +19,21 @@ var One_1 = {
             <p>
                 This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step, This is My First Step .
             </p>`
+},
+'One_2': { 
+    title:'One_2',
+    heading:'Article two',
+    date:'March 18 2018',
+    content:` <p>
+                This is My First Step, 2!
+                </p>`},
+'One_3': {
+    title:'One_3',
+    heading:'Article three',
+    date:'March 18 2018',
+    content:` <p>
+                This is My First Step, 3!
+                </p>`}
 };
 function createhtml(data){
     var title=data.title;
@@ -57,8 +73,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/One_1', function(req,res){
-    res.send(createhtml(One_1));
+app.get('/:articlename', function(req,res){
+    res.send(createhtml(articles[articlename]));
 });
 
 app.get('/One_2', function(req,res){
