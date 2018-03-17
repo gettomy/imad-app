@@ -77,15 +77,6 @@ app.get('/:articlename', function(req,res){
     res.send(createhtml(articles[articlename]));
 });
 
-app.get('/One_2', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'One_2.html'));
-});
-
-app.get('/One_3', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'One_3.html'));
-});
-
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
