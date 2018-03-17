@@ -76,7 +76,7 @@ app.get('/', function (req, res) {
 app.get('/:articlename', function(req,res){
     res.send(createhtml(articles[articlename]));
 });
-
+var articlename=req.params.articleName;
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
