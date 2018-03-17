@@ -14,11 +14,11 @@ app.get('/One_1', function(req,res){
 });
 
 app.get('/One_2', function(req,res){
-    res.send("Good Going !!");
+    res.sendFile(path.join(__dirname, 'ui', 'One_2.html'));
 });
 
 app.get('/One_3', function(req,res){
-    res.send("See I told Oh ! Now Go Ahead");
+    res.sendFile(path.join(__dirname, 'ui', 'One_3.html'));
 });
 
 
