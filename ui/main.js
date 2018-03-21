@@ -14,6 +14,6 @@ button.onclick = function (){
           }
       }  
     };
-    response.open('GET','http://sagarratangarg.imad.hasura-app.io/counter',true);
-    response.send(null);
+    request.open('GET','http://sagarratangarg.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
