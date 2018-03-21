@@ -1,6 +1,4 @@
 console.log('Loaded!');
-var element=document.getElementById('main');
-element.innerHTML='HE HE';
 var img=document.getElementById('madi');
 var marginleft=0;
 function moveright(){
